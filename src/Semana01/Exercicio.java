@@ -15,6 +15,18 @@ public class Exercicio {
 
         while (!inputValue.equalsIgnoreCase("FIM")) {
             studentsName.add(inputValue);
+            System.out.println("Digite a primeira nota do aluno:");
+            float nota1 = entry.nextFloat();
+            System.out.println("Digite a segunda nota do aluno:");
+            float nota2 = entry.nextFloat();
+            System.out.println("Digite a terceira nota do aluno:");
+            float nota3 = entry.nextFloat();
+
+            float[] notas = new float[3];
+            notas[0] = nota1;
+            notas[1] = nota2;
+            notas[2] = nota3;
+
             System.out.println("Enter student name or the word FIM to stop:");
             inputValue = entry.next();
         }
