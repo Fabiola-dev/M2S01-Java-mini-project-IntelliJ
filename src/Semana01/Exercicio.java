@@ -1,6 +1,7 @@
 package Semana01;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Exercicio {
@@ -33,6 +34,10 @@ public class Exercicio {
             inputValue = entry.next();
         }
 
+        for ( int i = 0 ; i < studentsName.size() ; i++ ) {
+            System.out.println("Student: " + studentsName.get(i));
+            System.out.println("Grade: " + Arrays.toString(studentGrades.get(i)));
+        }
 
     }
 }
