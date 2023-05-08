@@ -8,6 +8,7 @@ public class Exercicio {
     public static void main(String[] args) {
 
         ArrayList<String> studentsName = new ArrayList<>();
+        ArrayList<float[]> studentGrades = new ArrayList<>();
 
         Scanner entry = new Scanner(System.in);
         System.out.println("Enter student name or the word FIM to stop:");
@@ -26,6 +27,7 @@ public class Exercicio {
             notas[0] = nota1;
             notas[1] = nota2;
             notas[2] = nota3;
+            studentGrades.add(notas);
 
             System.out.println("Enter student name or the word FIM to stop:");
             inputValue = entry.next();
