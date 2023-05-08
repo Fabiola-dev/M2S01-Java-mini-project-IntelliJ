@@ -17,11 +17,11 @@ public class Exercicio {
 
         while (!inputValue.equalsIgnoreCase("FIM")) {
             studentsName.add(inputValue);
-            System.out.println("Digite a primeira nota do aluno:");
+            System.out.println("Enter student first grade:");
             float nota1 = entry.nextFloat();
-            System.out.println("Digite a segunda nota do aluno:");
+            System.out.println("Enter student second grade::");
             float nota2 = entry.nextFloat();
-            System.out.println("Digite a terceira nota do aluno:");
+            System.out.println("Enter student third grade::");
             float nota3 = entry.nextFloat();
 
             float[] notas = new float[3];
@@ -34,6 +34,9 @@ public class Exercicio {
             inputValue = entry.next();
         }
 
+        ArrayList<String> approved = new ArrayList<>();
+        ArrayList<String> notApproved = new ArrayList<>();
+
         for ( int i = 0 ; i < studentsName.size() ; i++ ) {
             System.out.println("Student: " + studentsName.get(i));
             System.out.println("Grade: " + Arrays.toString(studentGrades.get(i)));
@@ -44,7 +47,19 @@ public class Exercicio {
             }
             double mean = totalGrades /studentGrades.get(i).length;
             System.out.println("Mean: " + mean);
+
+            if ( mean >= 7.0 ) {
+                approved.add(studentsName.get(i) + " with mean " + mean);
+            } else {
+                notApproved.add(studentsName.get(i) + " with mean " + mean);
+            }
         }
+
+        System.out.println("Students approved and their mean:");
+        approved.forEach(System.out::println);
+
+        System.out.println("Students not approved and their mean:");
+        notApproved.forEach(System.out::println);
 
     }
 }
