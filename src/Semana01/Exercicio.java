@@ -37,7 +37,7 @@ public class Exercicio {
         for ( int i = 0 ; i < studentsName.size() ; i++ ) {
             System.out.println("Student: " + studentsName.get(i));
             System.out.println("Grade: " + Arrays.toString(studentGrades.get(i)));
-
+            
             double totalGrades = 0.0;
             for ( int j = 0 ; j < studentGrades.get(i).length ; j++) {
                 totalGrades += studentGrades.get(i)[j];
